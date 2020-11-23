@@ -6,16 +6,17 @@ install:
 
 script: make ci
 
-#deploy:
-#  provider: heroku
-#  api_key: ...
-#  app: ...
-#  on:
-#    branch: main
-#  run:
-#    - make migrate
-#    - restart
-#    - "..."
+deploy:
+  provider: heroku
+  app: setup-practice
+  api_key:
+    secure: $HEROKU_API_KEY
+  on:
+    branch: main
+  run:
+    - alembic upgrade head
+    - restart
+    - flask run
 
 notifications:
   email:
