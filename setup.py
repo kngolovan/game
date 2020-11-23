@@ -8,6 +8,6 @@ setup(
     include_package_data=True,
     install_requires=["flask"],
     extras_require={
-        "ci": ["black", "coverage", "coveralls", "pytest", "pylint"]
+        "ci": ["black", "coveralls", "pytest", "pytest-cov", "pylint"]
     },
 )
