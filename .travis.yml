@@ -13,7 +13,7 @@ script: make ci
 #  on:
 #    branch: main
 #  run:
-#    - "alembic upgrade head"
+#    - make migrate
 #    - restart
 #    - "..."
 

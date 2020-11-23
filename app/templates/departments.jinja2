@@ -1,0 +1,17 @@
+{% extends 'base.jinja2' %}
+
+{% block title %}Departments{% endblock %}
+
+{% block content %}
+    {% for department in departments %}
+        <article>
+            <header>
+                <div>
+                    <h1>{{ department['name'] }}</h1>
+                    <div class="about">created on {{ department['created_at'].strftime('%Y-%m-%d') }}</div>
+                </div>
+            </header>
+            <p class="body">body</p>
+        </article>
+    {% endfor %}
+{% endblock %}

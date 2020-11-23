@@ -1,6 +1,6 @@
 import pytest
 
-from code.utils import add
+from app.utils import add
 
 
 @pytest.mark.parametrize("a, b, expected", [(1, 1, 2), (100, 150, 250)])

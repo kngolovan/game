@@ -1,0 +1,9 @@
+[MASTER]
+load-plugins =
+    pylint_flask,
+    pylint_flask_sqlalchemy
+
+
+[DESIGN]
+# Minimum number of public methods for a class (see R0903).
+min-public-methods=0
