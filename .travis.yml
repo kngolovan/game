@@ -1,0 +1,25 @@
+language: python
+python: "3.9"
+
+install:
+  - pip install -e .
+
+script: make ci
+
+#deploy:
+#  provider: heroku
+#  api_key: ...
+#  app: ...
+#  on:
+#    branch: main
+#  run:
+#    - "alembic upgrade head"
+#    - restart
+#    - "..."
+
+notifications:
+  email:
+    recipients:
+      - kn.golovan@gmail.com
+    on_success: never
+    on_failure: always

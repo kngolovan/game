@@ -1,0 +1,8 @@
+[tool.black]
+ensure_newline_before_comments = true
+include_trailing_comma = true
+line_length = 79
+use_parentheses = true
+
+[tool.pylint.format]
+max-line-length = 79
