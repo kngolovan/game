@@ -1,23 +1,14 @@
 language: python
 python: "3.9"
-
 install:
   - pip install -e .[ci]
-
 script: make ci
 
 deploy:
-  provider: heroku
-  app: setup-practice
-  api_key:
-    secure: $HEROKU_API_KEY
+  provider: script
+  script: bash scripts/deploy.sh
   on:
     branch: main
-  run:
-    - pip install -e .
-    - alembic upgrade head
-    - restart
-    - flask run
 
 notifications:
   email:
