@@ -10,7 +10,8 @@ setup(
         "alembic",
         "flask",
         "flask-sqlalchemy",
-        "psycopg2-binary",
+        "gunicorn",
+        "psycopg2",
         "python-dotenv",
     ],
     extras_require={
