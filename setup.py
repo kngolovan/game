@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="My Application",
-    version="1.0",
+    version="1.0.0",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -16,13 +16,13 @@ setup(
     ],
     extras_require={
         "ci": [
-            "black",
-            "coveralls",
-            "pytest",
-            "pytest-cov",
-            "pylint",
-            "pylint_flask",
-            "pylint_flask_sqlalchemy",
+            "black==20.8b1",
+            "coveralls==2.2.0",
+            "pylint==2.6.0",
+            "pylint_flask==0.6",
+            "pylint_flask_sqlalchemy==0.2.0",
+            "pytest==6.1.2",
+            "pytest-cov==2.10.1",
         ]
     },
 )
