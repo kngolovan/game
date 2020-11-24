@@ -6,6 +6,11 @@ WORKDIR /practice
 
 COPY app ./app
 COPY migrations ./migrations
+COPY scripts ./scripts
 COPY alembic.ini setup.py ./
 
 RUN pip install -e .
+
+RUN chmod +x scripts/apply-migrations.sh
+ENTRYPOINT ["./scripts/apply-migrations.sh"]
+CMD ["gunicorn", "wsgi:app"]
